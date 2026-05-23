@@ -49,7 +49,7 @@ export default function Hero() {
     };
   }, []);
 
-  const menuItems = [
+  const menuItems: Array<{ key: "home"|"about"|"projects"|"experience"|"education"|"writing"|"contact"; href: string; highlight?: boolean }> = [
     { key: "home", href: "#hero", highlight: true },
     { key: "about", href: "#about" },
     { key: "projects", href: "#projects" },
@@ -57,7 +57,7 @@ export default function Hero() {
     { key: "education", href: "#experience" },
     { key: "writing", href: "#projects" },
     { key: "contact", href: "#contact" },
-  ] as const;
+  ];
 
   return (
     <section id="hero" className="relative min-h-screen overflow-hidden grain">
